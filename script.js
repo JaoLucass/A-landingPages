@@ -24,4 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
             lightbox.style.display = 'none';
         }
     });
+
+    // Suaviza o loop do mosaico
+    const mosaicTrack = document.querySelector('.mosaic-track');
+    if (mosaicTrack) {
+        mosaicTrack.addEventListener('animationiteration', () => {
+            mosaicTrack.style.animation = 'none';
+            void mosaicTrack.offsetWidth;
+            mosaicTrack.style.animation = 'scroll 40s linear infinite';
+        });
+    }
 });
