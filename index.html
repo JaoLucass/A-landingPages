@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- 1. Idioma ajustado para português -->
+<head>
+	<title>Gabriel Moretson Gallery</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Portfolio de Gabriel Moretson - Ilustrações e arte conceitual"> <!-- 2. Meta tag para SEO -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Gabriel Moretson</h1>
+		<nav>
+			<ul>
+				<!-- 3. Links corrigidos para âncoras -->
+				<li><a href="#about">Sobre</a></li>
+				<li><a href="#portfolio">Portfólio</a></li>
+				<li><a href="#contact">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section id="hero">
+		<h2>Welcome to the Gallery</h2>
+		<p>Discover the captivating artwork of Gabriel Moretson.</p> <!-- 4. Nome corrigido -->
+		<a href="#portfolio" class="button">View Portfolio</a> <!-- 5. Link para seção -->
+	</section>
+	
+	<section id="about">
+        <div class="photo">
+            <img src="images/perfil.jpg" alt="Foto de Gabriel Moretson"> <!-- 6. Alt corrigido -->
+        </div>
+		<h2>About Me</h2>
+		<p>Hello there! My name is Gabriel Moretson, and I am a freelance artist 
+            specializing in illustration and concept art. 
+            I have a strong passion for bringing unique and 
+            compelling characters and worlds to life through 
+            my art. I work with clients on a commission basis, 
+            and I pride myself on delivering high-quality work that meets their 
+            specific needs and vision. Whether you're looking for a character design, a book cover 
+            illustration, or anything in between, I'm here to bring your 
+            ideas to life. Feel free to contact me to discuss your 
+            project and see how we can work together!
+		</p>
+		<a href="#contact" class="button">Contact Me</a> <!-- 7. Link útil -->
+	</section>
+	
+	<section id="portfolio">
+		<h2>Portfolio</h2>
+		<div class="gallery">
+			<!-- 8. Ordem das imagens corrigida -->
+			<img src="images/imagem1.jpg" alt="Artwork: Project Alpha">
+			<img src="images/imagem2.jpg" alt="Artwork: Cyberpunk City">
+			<img src="images/imagem3.jpg" alt="Artwork: Fantasy Landscape"> <!-- Nomeclatura ajustada -->
+			<img src="images/imagem4.jpg" alt="Artwork: Character Design">
+			<img src="images/imagem5.jpg" alt="Artwork: Book Cover">
+			<img src="images/imagem6.jpg" alt="Artwork: Concept Art">
+		</div>
+		<a href="portfolio.html" class="button">Commission Art</a> <!-- 9. Call-to-action relevante -->
+	</section>
+	
+	<section id="contact">
+		<h2>Contact Us</h2>
+		<form id="contact-form">
+			<!-- 10. Labels com "for" e inputs com "id" correspondentes -->
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required> <!-- Campo obrigatório -->
+			
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" required></textarea>
+			
+			<button type="submit" class="button">Send Message</button>
+		</form>
+	</section>
+	
+	<footer>
+		<p>&copy; 2023 Gabriel Moretson Gallery. All rights reserved.</p>
+	</footer>
+
+	<!-- 11. Adicione isso antes do </body> para scroll suave -->
+	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+	</script>
+</body>
+</html>
